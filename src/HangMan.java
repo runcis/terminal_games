@@ -8,6 +8,8 @@ public class HangMan {
 
     public static void main( String[] args ) {
 
+        System.out.println ( "Hello to hangman, you have 5 tries to for letters and 5 possible consecutive games to play!" );
+
         String[] wordArray = new String[]{"easy", "helicopter", "complicated", "wizards", "jazz"};
         String tempWord;
         String blankWord = "";
@@ -68,6 +70,10 @@ public class HangMan {
                         }
                     }
                     if (test == tempWord.length()){
+                        check = false;
+                    }
+                    if (misses.length ()>10){
+                        System.out.println ( "Too many misses you are dead!");
                         check = false;
                     }
 
